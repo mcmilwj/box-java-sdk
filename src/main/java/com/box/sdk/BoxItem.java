@@ -446,4 +446,19 @@ public abstract class BoxItem extends BoxResource {
             return tags;
         }
     }
+
+    /**
+     * @return true if item is a file, false if not
+     */
+    public boolean isFile() {
+        return BoxFile.class.isAssignableFrom(this.getClass());
+    }
+
+    /**
+     * @return true if item is a folder, false if not
+     */
+    public boolean isFolder() {
+        return BoxFolder.class.isAssignableFrom(this.getClass());
+    }
+
 }
